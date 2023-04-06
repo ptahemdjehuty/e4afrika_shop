@@ -8,7 +8,14 @@ $cleanRoute = explode('?', $_SERVER['REQUEST_URI']);
 $route = $cleanRoute[0]; // Get the request URI
 
 if ($route === '/') {
-       echo 'Home';
+       require_once 'app/core/views/home.php';
+}
+else if ($route === '/register'){
+    require_once 'app/core/views/register.php';
+}
+
+else if ($route === '/login') {
+    require_once 'app/core/views/login.php';
 }
 
 else {
