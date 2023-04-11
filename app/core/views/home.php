@@ -11,6 +11,7 @@
     <hr>
     <a href="/register">Register</a> 
     <a href="/login">Login</a>
+    <a href="/productadd">Ajouter un product</a>
     <?php
     
     require_once 'app/core/controllers/home.php';

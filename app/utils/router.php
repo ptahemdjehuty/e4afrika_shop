@@ -18,6 +18,10 @@ else if ($route === '/login') {
     require_once 'app/core/views/login.php';
 }
 
+else if ($route === '/productadd') {
+    require_once 'app/core/views/productadd.php';
+}
+
 else {
     echo '404 vous etes perdue ;(';
 }

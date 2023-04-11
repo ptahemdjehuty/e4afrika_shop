@@ -13,7 +13,7 @@
 
         <input type="text" placeholder="Username" name="username" id=""> <br> 
 
-        <input type="password" placeholder="Password" name="password" id="">   <br> 
+        <input type="password" placeholder="Password" name="password" id=""> <br> 
 
         
         <input type="submit" value="Login">

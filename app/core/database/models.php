@@ -85,5 +85,6 @@ class Model
 			$query->execute($values);
 		}
 	}
+	
 }
 // author @ptahemdjehuty

@@ -40,24 +40,24 @@
             require_once 'app/core/database/models.php';
             $database = new Model();
             $table = 'user';
-            $fields = 'id, password';
+            $fields = 'id, password, profile';
             $sfield = 'username';
             $data = array($username);
 
             $query = $database->read_filter_once($table, $fields, $sfield, $data);
-            $pass =  $query->fetch();
+            $user =  $query->fetch();
 
 
-            if ($pass) {
+            if ($user) {
 
 
-                if ($pass['password'] == sha1($password)) {
+                if ($user['password'] == sha1($password)) {
                     
                     require_once 'app/utils/methods.php';
-                    $info = array(['username'=>$username, 'id'=>$pass['id']]);
+                    $info = array(['username'=>$username, 'profile'=>$profile, 'id'=>$pass['id']]);
                     authenticate($info);
 
-                    var_dump($_SESSION['user_info']);
+                   
                     echo '<script>alert("Bienvenue")</script>';
                     /*header('location: /');*/
 
@@ -72,8 +72,11 @@
                 echo '<script>alert("Nom d\'utilisateur ou mot de passe incorrect")</script>';
             }
         }
-    }        
+    }
 }
+    
+ 
+
 
 
 ?>
