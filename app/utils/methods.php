@@ -74,6 +74,8 @@ function generate_slug($urlString)
     return $slug;
 }
 
+function read()->categorie;
+
 
 // author : @ptahemdjehuty
 ?>
